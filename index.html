@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hello, dashboard!</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-1">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">商務控制後台</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">列表</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container-fluid my-3">
+      <div class="row">
+        <div class="col-lg-3 col-6 mt-2">
+          <div class="card rounded-0 h-100">
+            <div class="card-body d-flex align-items-center">
+              <div><i class="far fa-money-bill-alt fa-3x text-secondary d-none d-sm-block"></i></div>
+              <div class="text-center w-100">
+                <div class="h5">今日營收</div>
+                <div class="h4 fw-bold">192,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 mt-2">
+          <div class="card rounded-0">
+            <div class="card-body d-flex align-items-center h-100">
+              <div><i class="fas fa-user-alt fa-3x text-secondary d-none d-sm-block"></i></div>
+              <div class="text-center w-100">
+                <div class="h5">會員增加</div>
+                <div class="display-3">172</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 mt-2">
+          <div class="card rounded-0">
+            <div class="card-body d-flex align-items-center h-100">
+              <div><i class="fas fa-file-alt fa-3x text-secondary d-none d-sm-block"></i></div>
+              <div class="text-center w-100">
+                <div class="h5">訂單數</div>
+                <div class="display-3">320</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 mt-2">
+          <div class="card rounded-0">
+            <div class="card-body d-flex align-items-center h-100">
+              <div><i class="fas fa-box fa-3x text-secondary d-none d-sm-block"></i></div>
+              <div class="text-center w-100">
+                <div class="h5">待出貨數</div>
+                <div class="display-3">120</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 訂單管理 -->
+      <div class="row my-3">
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <div class="h6">目前上線人數</div>
+              <div class="display-1">99</div>
+              <div class="progress mt-3">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 25%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  桌機
+                </div>
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 75%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  行動裝置
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header">訂單管理</div>
+            <div class="card-body">
+              <button class="btn btn-outline-secondary btn-sm d-block ms-auto">新增訂單</button>
+              <table class="table mt-2">
+                <thead>
+                  <tr class="table-secondary">
+                    <th scope="col">ID</th>
+                    <th scope="col">數量</th>
+                    <th scope="col">產品</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">價格</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Hippo</td>
+                    <td>回香豆蔻甘草百里香風味白蛋</td>
+                    <td>100</td>
+                    <td>180</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Timothy</td>
+                    <td>法式焗香奶油煎餅佐相思豆泥</td>
+                    <td>86</td>
+                    <td>99</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Pikachu</td>
+                    <td>碳烤台灣熱狗厚切糯米捲</td>
+                    <td>20</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Pikachu</td>
+                    <td>香煎餅佐嫩綠青蔥</td>
+                    <td>56</td>
+                    <td>300</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row" colspan="3"></th>
+                    <td>總營收</td>
+                    <td>41,414</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- chart.js -->
+    <div class="container-fluid">
+      <section>
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <div class="card h-100 rounded-0">
+              <div class="card-header">用戶來源</div>
+              <div class="card-body d-flex align-items-center">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="text-center">Chart.js Bar Chart</p>
+                    <canvas id="barCanvas"></canvas>
+                  </div>
+                  <div class="col-md-4 px-4">
+                    <div class="h5 fw-bold">Details</div>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nemo, fugiat porro omnis fuga
+                      perferendis ad blanditiis fugit accusantium quod maxime earum maiores illum quas iusto.
+                      Consectetur quia vero dolores?
+                    </p>
+                    <div class="h6 mt-2 fw-bold">Google 來源</div>
+                    <div class="progress" style="height: 5px">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 25%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="h6 mt-2 fw-bold">Facebook 來源</div>
+                    <div class="progress" style="height: 5px">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="h6 mt-2 fw-bold">無法追蹤</div>
+                    <div class="progress" style="height: 5px">
+                      <div
+                        class="progress-bar bg-info"
+                        role="progressbar"
+                        style="width: 75%"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card h-100 rounded-0">
+              <div class="card-header">瀏覽器</div>
+              <div class="card-body d-flex align-items-center justify-content-center">
+                <div>
+                  <canvas class="chart-item"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="card rounded">
+          <div class="card-header">月營運狀態</div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <div class="form-inline">
+                  <div class="form-group">
+                    <label for="month" class="form-label visually-hidden">月份</label>
+                    <select name="" id="month" class="form-select">
+                      <option value="9">9月</option>
+                      <option value="10">10月</option>
+                      <option value="11">11月</option>
+                      <option value="12">12月</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a href="#" class="btn btn-outline-secondary">下載報表</a>
+                <a href="#" class="btn btn-outline-secondary">訂單管理</a>
+              </div>
+            </div>
+            <div class="table-responsive-md">
+              <table class="table mt-3 table-hover mb-0">
+                <thead>
+                  <tr class="table-light">
+                    <th scope="col" width="50">日期</th>
+                    <th scope="col">訂單數</th>
+                    <th scope="col">退費數</th>
+                    <th scope="col">出貨數</th>
+                    <th scope="col">有問題貨品</th>
+                    <th scope="col" width="150">營業額</th>
+                    <th scope="col" width="150">淨利潤</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">9/1</th>
+                    <td>300</td>
+                    <td>1</td>
+                    <td>250</td>
+                    <td>3</td>
+                    <td class="text-end">256,000</td>
+                    <td class="text-end">168,000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9/1</th>
+                    <td>300</td>
+                    <td>1</td>
+                    <td>250</td>
+                    <td>3</td>
+                    <td class="text-end">256,000</td>
+                    <td class="text-end">168,000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9/1</th>
+                    <td>300</td>
+                    <td>1</td>
+                    <td>250</td>
+                    <td>3</td>
+                    <td class="text-end">256,000</td>
+                    <td class="text-end">168,000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9/1</th>
+                    <td>300</td>
+                    <td>1</td>
+                    <td>250</td>
+                    <td>3</td>
+                    <td class="text-end">256,000</td>
+                    <td class="text-end">168,000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9/1</th>
+                    <td>300</td>
+                    <td>1</td>
+                    <td>250</td>
+                    <td>3</td>
+                    <td class="text-end">256,000</td>
+                    <td class="text-end">168,000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9/1</th>
+                    <td>300</td>
+                    <td>1</td>
+                    <td>250</td>
+                    <td>3</td>
+                    <td class="text-end">256,000</td>
+                    <td class="text-end">168,000</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="6" class="text-end">月總營收</td>
+                    <td class="text-end">3,750,500</td>
+                  </tr>
+                  <tr>
+                    <td colspan="6" class="text-end">月總淨利潤</td>
+                    <td class="text-end">2,140,500</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <hr />
+    <section class="container-fluid">
+      <div class="d-flex">
+        <div class="input-group mb-3 w-25">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search for..."
+            aria-label="search for orders"
+            aria-describedby="search for orders"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            data-bs-html="true"
+            title=" <em> 快速搜尋訂單 </em> "
+          />
+          <button class="btn btn-secondary" id="search" type="button">Go</button>
+        </div>
+        <div class="ms-auto">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" data-title="快速下單">
+            快速下單
+          </button>
+        </div>
+      </div>
+
+      <div class="table-reponsive">
+        <table class="table table-hover align-middle">
+          <thead>
+            <tr>
+              <th scope="col" width="50">#</th>
+              <th scope="col">品項</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">狀態</th>
+              <th scope="col" width="150" class="text-end">金額</th>
+              <th scope="col" width="250" class="text-center">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td class="text-primary">超纖細肥皂 1盒</td>
+              <td>Mark<span class="badge rounded-pill bg-danger ms-2">奧客</span></td>
+              <td>Mark@mail.com</td>
+              <td>已出貨</td>
+              <td class="text-end">NT$ 899</td>
+              <td class="text-center">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editModal"
+                    data-title="編輯 超纖細肥皂"
+                    data-email="Mark@mail.com"
+                    data-name="Mark"
+                    data-num="1"
+                  >
+                    編輯
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">查看</button>
+
+                  <div class="btn-group" role="group">
+                    <button
+                      id="btnGroupDrop1"
+                      type="button"
+                      class="btn btn-outline-secondary dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      更多
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <li><a class="dropdown-item" href="#">操作紀錄</a></li>
+                      <li><a class="dropdown-item" href="#">資歷匯出</a></li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#removeModal"
+                          data-title="超纖細肥皂"
+                          >刪除</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-danger">
+              <th scope="row">2</th>
+              <td class="text-primary">(保證)無泡泡沐浴乳 5罐</td>
+              <td>Jacob<span class="badge rounded-pill bg-success ms-2">常客</span></td>
+              <td>Jacob@mail.com</td>
+              <td>缺貨</td>
+              <td class="text-end">NT$ 3,600</td>
+              <td class="text-center">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editModal"
+                    data-title="編輯 (保證)無泡泡沐浴乳"
+                    data-email="Jacob@mail.com"
+                    data-name="Jacob"
+                    data-num="5"
+                  >
+                    編輯
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">查看</button>
+
+                  <div class="btn-group" role="group">
+                    <button
+                      id="btnGroupDrop1"
+                      type="button"
+                      class="btn btn-outline-secondary dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      更多
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <li><a class="dropdown-item" href="#">操作紀錄</a></li>
+                      <li><a class="dropdown-item" href="#">資歷匯出</a></li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#removeModal"
+                          data-title="(保證)無泡泡沐浴乳"
+                          >刪除</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td class="text-primary">防滑燈罩 100個</td>
+              <td>Larry</td>
+              <td>Larry@mail.com</td>
+              <td>已出貨</td>
+              <td class="text-end">NT$ 14,060</td>
+              <td class="text-center">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editModal"
+                    data-title="編輯 防滑燈罩"
+                    data-email="Larry@mail.com"
+                    data-name="Larry"
+                    data-num="100"
+                  >
+                    編輯
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">查看</button>
+
+                  <div class="btn-group" role="group">
+                    <button
+                      id="btnGroupDrop1"
+                      type="button"
+                      class="btn btn-outline-secondary dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      更多
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <li><a class="dropdown-item" href="#">操作紀錄</a></li>
+                      <li><a class="dropdown-item" href="#">資歷匯出</a></li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a
+                          class="dropdown-item text-danger"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#removeModal"
+                          data-title="防滑燈罩"
+                          >刪除</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-5">
+        <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item active" aria-current="page"><span class="page-link" href="#">1</span></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <footer class="bg-light text-center py-3">
+      <div class="text-secondary">六角學院後台管理系統</div>
+    </footer>
+    <!-- Modal -->
+    <!-- edit Modal -->
+    <div
+      class="modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      id="editModal"
+      aria-labelledby="editModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title text-light">快速下單</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">姓名</label>
+                <input id="orderName" type="text" class="form-control" placeholder="請輸入姓名" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input id="orderMail" type="email" class="form-control" placeholder="請輸入Email" />
+              </div>
+              <div class="col-md-8">
+                <label class="form-label">品項</label>
+                <input id="orderProduct" type="text" class="form-control" placeholder="請輸入品項" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">數量</label>
+                <input id="orderNum" type="number" class="form-control" placeholder="請輸入數量" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- remove Modal -->
+    <div
+      class="modal"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      id="removeModal"
+      aria-labelledby="removeModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger">
+            <h5 class="modal-title text-light">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>是否確認刪除訂單?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">否</button>
+            <button type="button" class="btn btn-danger px-5">是</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"
+      integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // edit Modal
+        $('#editModal').on('show.bs.modal', function (e) {
+          const btn = $(e.relatedTarget)
+          const title = btn.data('title')
+          const email = btn.data('email')
+          const name = btn.data('name')
+          const num = btn.data('num')
+          const modal = $(this)
+          modal.find('.modal-title').text(title)
+          modal.find('#orderName').val(name)
+          modal.find('#orderMail').val(email)
+          modal.find('#orderProduct').val(title)
+          modal.find('#orderNum').val(num)
+        })
+        // remove Modal
+        $('#removeModal').on('show.bs.modal', function (e) {
+          const btn = $(e.relatedTarget)
+          const title = btn.data('title')
+          const modal = $(this)
+          modal.find('.modal-title').text('確定刪除 ' + title)
+        })
+      })
+    </script>
+    <!-- Chart.js -->
+    <script>
+      window.chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)',
+      }
+
+      var randomScalingFactor = function () {
+        return Math.round(Math.random() * 100)
+      }
+
+      var config = {
+        type: 'pie',
+        data: {
+          datasets: [
+            {
+              data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+              ],
+              backgroundColor: [
+                window.chartColors.red,
+                window.chartColors.orange,
+                window.chartColors.yellow,
+                window.chartColors.green,
+                window.chartColors.blue,
+              ],
+              label: 'Dataset 1',
+            },
+          ],
+          labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+        },
+        options: {
+          responsive: true,
+        },
+      }
+
+      // bar
+      var MONTHS = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ]
+      var colors = Chart.helpers.color
+      var barChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            label: 'Dataset 1',
+            backgroundColor: colors(window.chartColors.red).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.red,
+            borderWidth: 1,
+            data: [
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+            ],
+          },
+          {
+            label: 'Dataset 2',
+            backgroundColor: colors(window.chartColors.blue).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.blue,
+            borderWidth: 1,
+            data: [
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+            ],
+          },
+        ],
+      }
+
+      window.onload = function () {
+        // pie
+        document.querySelectorAll('.chart-item').forEach(function (item) {
+          config.data.datasets.forEach(function (dataset) {
+            dataset.data = dataset.data.map(function () {
+              return randomScalingFactor()
+            })
+          })
+          var ctx = item.getContext('2d')
+          window.myPie = new Chart(ctx, config)
+        })
+
+        // bar
+        var barCtx = document.getElementById('barCanvas').getContext('2d')
+        window.myBar = new Chart(barCtx, {
+          type: 'bar',
+          data: barChartData,
+          options: {
+            responsive: true,
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Chart.js Bar Chart',
+            },
+          },
+        })
+      }
+
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    </script>
+  </body>
+</html>
